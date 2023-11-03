@@ -1,1 +1,4 @@
-# Deep-model-scratch
+# Deep Learning from Scratch
+## Model
+## Loss
+## Training
