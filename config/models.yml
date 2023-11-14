@@ -1,0 +1,4 @@
+vit_base:
+  dataset_type: image
+  task: classification
+  output_type: -1
