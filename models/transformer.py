@@ -19,8 +19,8 @@ class SelfAttention(nn.Module):
         self.fc_out = nn.Linear(embed_size, embed_size)
 
     def forward(self, values, keys, queries, mask):
-        N = queries.shape[0]
-        value_len, key_len, query_len = values.shape[1], keys.shape[1], queries.shape[1]
+        N = queries.size(0)
+        value_len, key_len, query_len = values.size(1), keys.size(1), queries.size(1)
 
         values = self.values(values)
         keys = self.keys(keys)
@@ -31,7 +31,7 @@ class SelfAttention(nn.Module):
         keys = keys.reshape(N, key_len, self.heads, self.head_dim)
         queries = queries.reshape(N, query_len, self.heads, self.head_dim)
 
-        energy = torch.einsum("nqhd,nkhd->nhqk", [queries, keys])
+        energy = torch.einsum("nqhd, nkhd->nhqk", [queries, keys])
 
         if mask is not None:
             energy = energy.masked_fill(mask == 0, float("-1e20"))
@@ -90,7 +90,7 @@ class Encoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x, mask):
-        N, seq_len = x.shape
+        N, seq_len = x.size()
         positions = torch.arange(0, seq_len).expand(N, seq_len).to(self.device)
         output = self.dropout(
             self.word_enbedding(x) + self.position_embedding(positions)
@@ -139,7 +139,7 @@ class Decoder(nn.Module):
         self.fc_out = nn.Linear(embed_size, trg_vocab_size)
 
     def forward(self, x, encoder_out, src_mask, trg_mask):
-        N, seq_len = x.shape
+        N, seq_len = x.size()
         positions = torch.arange(0, seq_len).expand(N, seq_len).to(self.device)
         x = self.dropout(self.word_embedding(
             x) + self.position_embedding(positions))
@@ -149,7 +149,7 @@ class Decoder(nn.Module):
         return output
 
 
-class Transformer_Base(nn.Module):
+class Transformer(nn.Module):
     def __init__(self,
                  src_vocab_size,
                  trg_vocab_size,
@@ -161,9 +161,9 @@ class Transformer_Base(nn.Module):
                  heads=8,
                  dropout=0,
                  max_length=100,
-                 device="cpu",
+                 device="cuda",
                  ):
-        super(Transformer_Base, self).__init__()
+        super(Transformer, self).__init__()
         self.encoder = Encoder(src_vocab_size,
                                num_layers,
                                embed_size,
@@ -191,10 +191,8 @@ class Transformer_Base(nn.Module):
         return src_mask.to(self.device)
 
     def make_trg_mask(self, trg):
-        N, trg_len = trg.shape
-        trg_mask = torch.tril(torch.ones((trg_len, trg_len))).expand(
-            N, 1, trg_len, trg_len
-        )
+        N, trg_len = trg.size()
+        trg_mask = torch.tril(torch.ones((trg_len, trg_len))).expand(N, 1, trg_len, trg_len)
         return trg_mask.to(self.device)
 
     def forward(self, src, trg):
@@ -205,22 +203,26 @@ class Transformer_Base(nn.Module):
         return output
 
 
-# if __name__ == "__main__":
-#     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#     print(device)
+if __name__ == "__main__":
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-#     x = torch.tensor([[1, 5, 6, 4, 3, 9, 5, 2, 0], [1, 8, 7, 3, 4, 5, 6, 7, 2]]).to(
-#         device
-#     )
-#     trg = torch.tensor([[1, 7, 4, 3, 5, 9, 2, 0], [
-#                        1, 5, 6, 2, 4, 7, 6, 2]]).to(device)
+    x = torch.tensor([[1, 5, 6, 4, 3, 9, 5, 2, 0], 
+                      [1, 8, 7, 3, 4, 5, 6, 7, 2]]
+                    ).to(device)
+    
+    trg = torch.tensor([[1, 7, 4, 3, 5, 9, 2, 0], 
+                        [1, 5, 6, 2, 4, 7, 6, 2]]
+                      ).to(device)
 
-#     src_pad_idx = 0
-#     trg_pad_idx = 0
-#     src_vocab_size = 10
-#     trg_vocab_size = 10
-#     model = Transformer(src_vocab_size, trg_vocab_size, src_pad_idx, trg_pad_idx, device=device).to(
-#         device
-#     )
-#     out = model(x, trg[:, :-1])
-#     print(out.shape)
+    src_pad_idx = 0
+    trg_pad_idx = 0
+    src_vocab_size = 100
+    trg_vocab_size = 150
+    model = Transformer(src_vocab_size, 
+                        trg_vocab_size, 
+                        src_pad_idx, 
+                        trg_pad_idx, 
+                        device=device)
+    model.to(device)
+    output = model(x, trg[:, :-1])
+    print(output.size())
