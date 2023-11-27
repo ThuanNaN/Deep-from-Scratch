@@ -13,7 +13,7 @@ def pair(t):
 
 class PreNorm(nn.Module):
     def __init__(self, dim, fn):
-        super().__init__()
+        super(PreNorm, self).__init__()
         self.norm = nn.LayerNorm(dim)
         self.fn = fn
     
@@ -23,7 +23,7 @@ class PreNorm(nn.Module):
 
 class FeedForward(nn.Module):
     def __init__(self, dim, hiden_dim, dropout = 0.):
-        super().__init__()
+        super(FeedForward, self).__init__()
         self.net = nn.Sequential(
             nn.Linear(dim, hiden_dim),
             nn.GELU(),
@@ -47,7 +47,7 @@ class FeedForward(nn.Module):
 
 class Attention(nn.Module):
     def __init__(self, dim, heads = 8, dim_head = 64, dropout = 0.):
-        super().__init__()
+        super(Attention, self).__init__()
         inner_dim = dim_head * heads
         project_out = not (heads == 1 and dim_head ==  dim)
 
@@ -80,7 +80,7 @@ class Attention(nn.Module):
 
 class Transformer(nn.Module):
     def __init__(self, dim, depth, heads, dim_head, mlp_dim, dropout = 0.):
-        super().__init__()
+        super(Transformer, self).__init__()
         self.layers = nn.ModuleList([])
 
         for _ in range(depth):
@@ -101,7 +101,7 @@ class ViT(nn.Module):
                     dim, depth, heads, mlp_dim, dim_head = 64, dropout = 0. , \
                     pool = "cls", chanels = 3, emb_dropout = 0. ):
         
-        super().__init__()
+        super(ViT, self).__init__()
         image_height, images_width = pair(image_size)
         patch_height, patch_width = pair(patch_size)
 
