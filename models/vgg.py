@@ -112,6 +112,6 @@ def vgg19_bn(**kwargs):
 # Testing
 if __name__ == "__main__":
     image_tensor = torch.randn((1,3,224,224))
-    vgg16_model = vgg16(num_classes=100)
-    output = vgg16_model(image_tensor)
+    model = vgg16(num_classes=100)
+    output = model(image_tensor)
     print(output.size())

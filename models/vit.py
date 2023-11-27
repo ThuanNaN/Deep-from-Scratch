@@ -152,7 +152,7 @@ class ViT(nn.Module):
 if __name__ == "__main__":
     image_tensor = torch.randn((1,3,224,224))
 
-    vit_model = ViT(image_size=224,
+    model = ViT(image_size=224,
                     patch_size=32,
                     num_classes=100,
                     dim=1024,
@@ -161,5 +161,5 @@ if __name__ == "__main__":
                     mlp_dim=2048,
                     dropout=0.1,
                     emb_dropout=0.1)
-    output = vit_model(image_tensor)
+    output = model(image_tensor)
     print(output.size())
