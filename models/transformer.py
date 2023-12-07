@@ -4,7 +4,7 @@ import torch.nn as nn
 
 class SelfAttention(nn.Module):
     def __init__(self, embed_size, heads):
-        super(SelfAttention, self).__init__()
+        super().__init__()
         self.embed_size = embed_size
         self.heads = heads
         self.head_dim = embed_size // heads
@@ -47,7 +47,7 @@ class SelfAttention(nn.Module):
 
 class TransformerBlock(nn.Module):
     def __init__(self, embed_size, heads, dropout, forward_expansion):
-        super(TransformerBlock, self).__init__()
+        super().__init__()
 
         self.attention = SelfAttention(embed_size, heads)
         self.norm1 = nn.LayerNorm(embed_size)
@@ -70,7 +70,7 @@ class TransformerBlock(nn.Module):
 
 class Encoder(nn.Module):
     def __init__(self, src_vocab_size, num_layers, embed_size, heads, forward_expansion, dropout, max_length, device):
-        super(Encoder, self).__init__()
+        super().__init__()
         self.embed_size = embed_size
         self.device = device
         self.word_enbedding = nn.Embedding(src_vocab_size, embed_size)
@@ -103,7 +103,7 @@ class Encoder(nn.Module):
 
 class DecoderBlock(nn.Module):
     def __init__(self, embed_size, heads, forward_expansion, dropout):
-        super(DecoderBlock, self).__init__()
+        super().__init__()
         self.norm = nn.LayerNorm(embed_size)
         self.attention = SelfAttention(embed_size, heads)
         self.transformer_block = TransformerBlock(
@@ -119,7 +119,7 @@ class DecoderBlock(nn.Module):
 
 class Decoder(nn.Module):
     def __init__(self, trg_vocab_size, num_layers, embed_size, heads, forward_expansion, dropout, max_length, device):
-        super(Decoder, self).__init__()
+        super().__init__()
         self.device = device
         self.word_embedding = nn.Embedding(trg_vocab_size, embed_size)
         self.position_embedding = nn.Embedding(max_length, embed_size)
@@ -163,7 +163,7 @@ class Transformer(nn.Module):
                  max_length=100,
                  device="cuda",
                  ):
-        super(Transformer, self).__init__()
+        super().__init__()
         self.encoder = Encoder(src_vocab_size,
                                num_layers,
                                embed_size,
