@@ -20,7 +20,7 @@ class VGG(nn.Module):
                  num_classes: int = 1000, 
                  init_weights: bool = True, 
                  dropout: float = 0.5) -> None:
-        super(VGG, self).__init__()
+        super().__init__()
         self.features = features
         self.avgpool = nn.AdaptiveAvgPool2d((7, 7))
         self.classifier = nn.Sequential(

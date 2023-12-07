@@ -44,7 +44,7 @@ class BasicBlock(nn.Module):
                  dilation: int = 1,
                  norm_layer: Optional[Callable[..., nn.Module]] = None
                  ) -> None:
-        super(BasicBlock, self).__init__()
+        super().__init__()
 
         if norm_layer is None:
             norm_layer = nn.BatchNorm2d
@@ -92,7 +92,7 @@ class BottleneckBlock(nn.Module):
                  dilation: int = 1,
                  norm_layer: Optional[Callable[..., nn.Module]] = None
                  ) -> None:
-        super(BottleneckBlock, self).__init__()
+        super().__init__()
 
         if norm_layer is None:
             norm_layer = nn.BatchNorm2d
@@ -138,7 +138,7 @@ class ResNet(nn.Module):
                  replace_stride_with_dilation: Optional[List[bool]] = None,
                  norm_layer: Optional[Callable[..., nn.Module]] = None
                  ) -> None:
-        super(ResNet, self).__init__()
+        super().__init__()
 
         if norm_layer is None:
             norm_layer = nn.BatchNorm2d

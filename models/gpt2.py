@@ -25,7 +25,7 @@ class GPTConfig:
 
 class LayerNorm(nn.Module):
     def __init__(self, ndim: int, bias: bool) -> None:
-        super(LayerNorm, self).__init__()
+        super().__init__()
         self.weight =nn.Parameter(torch.ones(ndim))
         self.bias = nn.Parameter(torch.zeros(ndim)) if bias else None
     
@@ -35,7 +35,7 @@ class LayerNorm(nn.Module):
 
 class CausalSelfAttention(nn.Module):
     def __init__(self, config: GPTConfig) -> None:
-        super(CausalSelfAttention, self).__init__()
+        super().__init__()
         assert config.n_embd % config.n_head == 0
         # MultiHead
         self.c_attn = nn.Linear(config.n_embd, 3*config.n_embd, bias=config.bias)
@@ -82,7 +82,7 @@ class CausalSelfAttention(nn.Module):
 
 class GPT2MLP(nn.Module):
     def __init__(self, config: GPTConfig) -> None:
-        super(GPT2MLP, self).__init__()
+        super().__init__()
         self.c_fc = nn.Linear(config.n_embd, 4*config.n_embd, bias=config.bias)
         self.gelu = nn.GELU()
         self.c_proj = nn.Linear(4*config.n_embd, config.n_embd, bias=config.bias)
@@ -100,7 +100,7 @@ class GPT2Block(nn.Module):
     def __init__(self,
                  config: GPTConfig
                  ) -> None:
-        super(GPT2Block, self).__init__()
+        super().__init__()
         self.ln_1 = LayerNorm(config.n_embd, bias=config.bias)
         self.attn = CausalSelfAttention(config)
         self.ln_2 = LayerNorm(config.n_embd, bias=config.bias)
@@ -114,9 +114,8 @@ class GPT2Block(nn.Module):
 
 class GPT2Model(nn.Module):
     def __init__(self, config: GPTConfig) -> None:
-        super(GPT2Model, self).__init__()
+        super().__init__()
         self.config = config
-
         self.transformer = nn.ModuleDict(dict(
             wte = nn.Embedding(config.vocab_size, config.n_embd),
             wpe = nn.Embedding(config.block_size, config.n_embd),
