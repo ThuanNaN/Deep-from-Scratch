@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 
 class CIFAR10_Loader:
     def __init__(self, 
-                 data_dir: str, 
+                 data_dir: str = "./data/downloaded/", 
                  mean = (0.4914, 0.4821, 0.4465),
                  std = (0.2471, 0.2435, 0.2616)
                  ) -> None:
@@ -26,7 +26,7 @@ class CIFAR10_Loader:
         self.valid_dataset = CIFAR10(root=data_dir, train=True, download=True, transform=valid_transforms)
 
 
-    def get_dataloader(self, batch_size, num_workers=1):
+    def get_dataloader(self, batch_size, num_workers=0):
         train_loader = DataLoader(self.train_dataset, batch_size=batch_size, num_workers=num_workers, shuffle=True)
         valid_loader = DataLoader(self.valid_dataset, batch_size=batch_size, num_workers=num_workers)
 
