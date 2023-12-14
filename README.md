@@ -23,10 +23,6 @@
 - [ ] vLLM. https://docs.vllm.ai/en/latest/index.html
 - [ ] MLX. https://github.com/ml-explore/mlx - https://github.com/ml-explore/mlx-examples
 
-### Vietnamese LLMs
-- https://huggingface.co/vilm
-- https://huggingface.co/VietAI
-
 ### Inference
 - [ ] Triton server. https://github.com/triton-inference-server/tutorials - https://github.com/triton-inference-server/server/tree/main/docs/user_guide
 - [ ] Ollama. https://github.com/jmorganca/ollama
