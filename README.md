@@ -25,8 +25,10 @@
 - [ ] Perceiver IO. https://arxiv.org/abs/2107.14795
 - [ ] Flamingo. https://arxiv.org/abs/2204.14198
 - [ ] GPT4-V. https://cdn.openai.com/papers/GPTV_System_Card.pdf
+- [ ] PaLM. https://arxiv.org/abs/2204.02311
 
 ### Library, Framework
+- [ ] PyTorch 2.0. https://pytorch.org/docs/stable/index.html
 - [ ] vLLM. https://docs.vllm.ai/en/latest/index.html
 - [ ] MLX. https://github.com/ml-explore/mlx - https://github.com/ml-explore/mlx-examples
 
