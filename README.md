@@ -23,6 +23,8 @@
 - [ ] PhoGPT. https://github.com/VinAIResearch/PhoGPT 
 - [ ] RoFormer. https://arxiv.org/abs/2104.09864
 - [ ] Perceiver IO. https://arxiv.org/abs/2107.14795
+- [ ] Flamingo. https://arxiv.org/abs/2204.14198
+- [ ] GPT4-V. https://cdn.openai.com/papers/GPTV_System_Card.pdf
 
 ### Library, Framework
 - [ ] vLLM. https://docs.vllm.ai/en/latest/index.html
