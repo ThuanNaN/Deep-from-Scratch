@@ -1,4 +1,9 @@
 torch==2.1.1
 torchvsion=='0.16.1+cu121'
+transformers=='4.35.2'
+accelerate=='0.24.1'
+evaluate=='0.4.1'
+datasets=='2.15.0'
+peft=='0.7.1'
 einops==0.7.0
 wget==3.2
