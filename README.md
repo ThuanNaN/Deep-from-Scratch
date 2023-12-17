@@ -3,7 +3,6 @@
 ## TODOs
 ### Papers:
 - [ ] Scaling Laws. https://arxiv.org/abs/2203.15556
-- [ ] LoRA. https://arxiv.org/abs/2106.09685
 - [ ] QLoRA. https://arxiv.org/abs/2305.14314
 - [ ] Flash-Attention. https://arxiv.org/abs/2205.14135
 - [ ] Flash-Attention-2. https://arxiv.org/abs/2307.08691
