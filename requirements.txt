@@ -9,3 +9,4 @@ fairscale==0.4.13
 sentencepiece==0.1.99
 einops==0.7.0
 wget==3.2
+fire==0.5.0
