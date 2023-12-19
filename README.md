@@ -21,6 +21,7 @@
 - [ ] PyTorch 2.0. https://pytorch.org/docs/stable/index.html
 - [ ] vLLM. https://docs.vllm.ai/en/latest/index.html
 - [ ] MLX. https://github.com/ml-explore/mlx - https://github.com/ml-explore/mlx-examples
+- [ ] FairSeq. https://github.com/facebookresearch/fairseq
 
 ### Inference
 - [ ] Triton server. https://github.com/triton-inference-server/tutorials - https://github.com/triton-inference-server/server/tree/main/docs/user_guide
