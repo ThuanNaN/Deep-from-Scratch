@@ -1,11 +1,6 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 # This software may be used and distributed according to the terms of the Llama 2 Community License Agreement.
 
-"""
-Paper: https://arxiv.org/abs/2307.09288
-Offical Implementation: https://github.com/facebookresearch/llama
-"""
-
 import math
 from dataclasses import dataclass
 from typing import Optional, Tuple
