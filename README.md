@@ -10,11 +10,12 @@
 - [ ] Latent-Diffusion. https://arxiv.org/abs/2112.10752 - https://github.com/apple/ml-stable-diffusion
 - [ ] ControlNet. https://arxiv.org/abs/2302.05543
 - [ ] Lion Optimizer. https://arxiv.org/abs/2302.06675
-- [ ] Sophia Optimizer. https://arxiv.org/abs/2305.14342
 - [ ] TensorRT-LLM. https://github.com/NVIDIA/TensorRT-LLM
 - [ ] RoundingDINO. https://github.com/IDEA-Research/GroundingDINO
 - [ ] Rounded-Segment-Anything. https://github.com/IDEA-Research/Grounded-Segment-Anything
 - [ ] PhoGPT. https://github.com/VinAIResearch/PhoGPT 
+- [ ] SAM. https://github.com/facebookresearch/segment-anything/tree/main
+
 
 ### Library, Framework
 - [ ] PyTorch 2.0. https://pytorch.org/docs/stable/index.html
