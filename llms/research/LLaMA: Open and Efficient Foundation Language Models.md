@@ -1,5 +1,6 @@
 ## LLaMA: Open and Efficient Foundation Language Models
 - Link paper: https://arxiv.org/abs/2302.13971
+- Github: https://github.com/facebookresearch/llama
 
 ### Keywords:
 

@@ -1,5 +1,6 @@
 ## A Survey on Multimodal Large Language Models
 - Link paper: https://arxiv.org/abs/2306.13549
+- Github: https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models
 
 ### Keywords:
 - Large Language Models (LLMs)
