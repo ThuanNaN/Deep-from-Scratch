@@ -4,6 +4,6 @@
 
 ## Concepts:
 - Main idea: Keeps language model parameters frozen, but optimizes a small continuous task-specific vector (called the prefix)
-
+- Inspired by prompting
 
 
