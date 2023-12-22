@@ -1,0 +1,58 @@
+name: "ensemble_model"
+platform: "ensemble"
+max_batch_size: 0
+
+input [
+  {
+    name: "TEXT"
+    data_type: TYPE_STRING
+    dims: [-1]
+  }
+]
+output [
+  {
+    name: "TEXT_OUT"
+    data_type: TYPE_STRING
+    dims: [-1]
+  }
+]
+ensemble_scheduling {
+    step [
+        {
+            model_name: "encoder"
+            model_version: 1
+            input_map {
+                key: "TEXT"
+                value: "TEXT"
+            }
+            output_map {
+                key: "input_ids"
+                value: "input_ids"
+            }
+        },
+        {
+            model_name: "gpt2"
+            model_version: 1
+            input_map {
+                key: "input_ids"
+                value: "input_ids"
+            }
+            output_map {
+                key: "output_ids"
+                value: "output_ids"
+            }
+        },
+        {
+            model_name: "decoder"
+            model_version: 1
+            input_map {
+                key: "output_ids"
+                value: "output_ids"
+            }
+            output_map {
+                key: "TEXT_OUT"
+                value: "TEXT_OUT"
+            }
+        }
+    ]
+}

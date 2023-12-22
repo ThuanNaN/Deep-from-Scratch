@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  triton:
+    container_name: app_cont
+    image: app_img
+    restart: on-failure
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ${PWD}:/workspace/
+    ports:
+      - "5000:5000"
+    network_mode: "host"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    entrypoint: /bin/sh -c "python main.py"
