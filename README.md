@@ -15,6 +15,7 @@
 - [ ] Rounded-Segment-Anything. https://github.com/IDEA-Research/Grounded-Segment-Anything
 - [ ] PhoGPT. https://github.com/VinAIResearch/PhoGPT 
 - [ ] SAM. https://github.com/facebookresearch/segment-anything/tree/main
+- [ ] VideoCrafter. https://github.com/AILab-CVC/VideoCrafter
 
 
 ### Library, Framework
@@ -26,6 +27,11 @@
 ### Inference
 - [ ] Triton server. https://github.com/triton-inference-server/tutorials - https://github.com/triton-inference-server/server/tree/main/docs/user_guide
 - [ ] Ollama. https://github.com/jmorganca/ollama
+
+### UI
+- https://www.gradio.app/
+- https://github.com/oobabooga/text-generation-webui
+
 
 ## Reference
 - https://nn.labml.ai
