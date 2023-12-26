@@ -5,7 +5,7 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 import torch
 from dataset_loader.cifar10 import CIFAR10_Loader
-from from_scratch.models import ViT
+from code_fs.models import ViT
 from training_func import ClassificationTraining
 from utils import get_device
 
