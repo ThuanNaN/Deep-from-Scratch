@@ -4,9 +4,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 import torch
-from data_aa.cifar10 import CIFAR10_Loader
+from dataset_loader.cifar10 import CIFAR10_Loader
 from from_scratch.models import ViT
-from training import ClassificationTraining
+from training_func import ClassificationTraining
 from utils import get_device
 
 cifar10_loader = CIFAR10_Loader()
