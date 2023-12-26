@@ -17,7 +17,7 @@ optimizer_dict = {'adamw': torch.optim.AdamW,
                  }
 
 @dataclass
-class GPTConfig:
+class GPT2Config:
     block_size: int = 1024
     vocab_size: int = 50304 # GPT has 50257 vocab
     n_layer: int = 12
@@ -38,7 +38,7 @@ class LayerNorm(nn.Module):
 
 
 class CausalSelfAttention(nn.Module):
-    def __init__(self, config: GPTConfig) -> None:
+    def __init__(self, config: GPT2Config) -> None:
         super().__init__()
         assert config.n_embd % config.n_head == 0
         # MultiHead
@@ -85,7 +85,7 @@ class CausalSelfAttention(nn.Module):
 
 
 class GPT2MLP(nn.Module):
-    def __init__(self, config: GPTConfig) -> None:
+    def __init__(self, config: GPT2Config) -> None:
         super().__init__()
         self.c_fc = nn.Linear(config.n_embd, 4*config.n_embd, bias=config.bias)
         self.gelu = nn.GELU()
@@ -102,7 +102,7 @@ class GPT2MLP(nn.Module):
 
 class GPT2Block(nn.Module):
     def __init__(self,
-                 config: GPTConfig
+                 config: GPT2Config
                  ) -> None:
         super().__init__()
         self.ln_1 = LayerNorm(config.n_embd, bias=config.bias)
@@ -117,7 +117,7 @@ class GPT2Block(nn.Module):
 
 
 class GPT2Model(nn.Module):
-    def __init__(self, config: GPTConfig) -> None:
+    def __init__(self, config: GPT2Config) -> None:
         super().__init__()
         self.config = config
         self.transformer = nn.ModuleDict(dict(
@@ -209,7 +209,7 @@ class GPT2Model(nn.Module):
             print(f"overriding dropout rate to {override_args['dropout']}")
             config_args['dropout'] = override_args['dropout']
         # create a from-scratch initialized minGPT model
-        config = GPTConfig(**config_args)
+        config = GPT2Config(**config_args)
         model = GPT2Model(config)
         sd = model.state_dict()
         sd_keys = sd.keys()
@@ -365,7 +365,7 @@ class GPT2Model(nn.Module):
 
 
 if __name__ == "__main__":
-    config = GPTConfig()
+    config = GPT2Config()
     model = GPT2Model(config)
 
     batch_size = 16
