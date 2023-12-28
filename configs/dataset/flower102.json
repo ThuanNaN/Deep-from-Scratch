@@ -1,9 +1,0 @@
-{
-    "homepage": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
-    "download": {
-        "images": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/102flowers.tgz",
-        "image_segmentation": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/102segmentations.tgz",
-        "image_labels": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/imagelabels.mat",
-        "data_split": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/setid.mat"
-    }
-}

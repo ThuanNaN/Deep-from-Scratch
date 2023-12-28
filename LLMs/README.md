@@ -2,7 +2,7 @@
 
 ## 1. Papers:
 - [ ] Scaling Laws. https://arxiv.org/abs/2203.15556
-- [ ]Language Modeling Is Compression. https://arxiv.org/abs/2309.10668
+- [ ] Language Modeling Is Compression. https://arxiv.org/abs/2309.10668
 - [ ] LLaMA-Adapter. https://arxiv.org/abs/2303.16199
 - [ ] LLaMA-Adapter-V2. https://arxiv.org/abs/2304.15010
 - [ ] ControlNet. https://arxiv.org/abs/2302.05543
@@ -18,6 +18,9 @@
 - [ ] Transfer Learning. https://aclanthology.org/2020.findings-emnlp.41.pdf
 - [ ] LLaVA. https://arxiv.org/abs/2304.08485 - https://github.com/haotian-liu/LLaVA
 - [ ] Florence-2. https://arxiv.org/abs/2311.06242
+- [ ] A Comprehensive Overview of Large Language Models. https://arxiv.org/abs/2307.06435
+- [ ] Mamba. https://arxiv.org/abs/2312.00752
+- [ ] MoV - MoLORA. https://arxiv.org/pdf/2309.05444.pdf
 
 #### Speed-up LLMs
 - [ ] Flash-Attention. https://arxiv.org/abs/2205.14135
