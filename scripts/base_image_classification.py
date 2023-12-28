@@ -17,7 +17,7 @@ from torchvision.transforms import (
     CenterCrop, 
     Normalize)
 from torch.utils.data import DataLoader
-from code_fs.models import ViT
+from Code_fs.models import ViT
 
 logging.getLogger().setLevel(logging.INFO)
 logging.basicConfig(format="%(message)s", level=logging.INFO)
