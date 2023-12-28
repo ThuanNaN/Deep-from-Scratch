@@ -1,0 +1,1 @@
+"https://github.com/huggingface/transformers/blob/main/examples/pytorch/image-classification/run_image_classification.py"
