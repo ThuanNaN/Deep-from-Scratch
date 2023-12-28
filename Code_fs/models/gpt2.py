@@ -10,7 +10,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from dataclasses import dataclass
-from code_fs.optim.sophia import SophiaG
+from ..optim.sophia import SophiaG
 
 optimizer_dict = {'adamw': torch.optim.AdamW,
                   'sophiag': SophiaG
