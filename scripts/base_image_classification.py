@@ -2,9 +2,10 @@ import os
 import sys
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
+
 import logging
 from tqdm import tqdm
-from utils import colorstr
+from utils import colorstr, get_device
 import torch
 from datasets import load_dataset
 from torchvision.transforms import (
@@ -17,7 +18,6 @@ from torchvision.transforms import (
     Normalize)
 from torch.utils.data import DataLoader
 from code_fs.models import ViT
-from utils import get_device
 
 logging.getLogger().setLevel(logging.INFO)
 logging.basicConfig(format="%(message)s", level=logging.INFO)
@@ -178,8 +178,7 @@ def main():
 
 
 
-if __name__  == "__main__":
-    main()
+main()
 
 
 
