@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-python ./script/hf_image_classification_no_trainer.py \
+python scripts/hf_image_classification_no_trainer.py \
     --dataset_name "cifar10" \
     --train_val_split 0.1 \
     --max_eval_samples 10 \
