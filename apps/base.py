@@ -1,9 +1,20 @@
 import gradio as gr
 
-def greet(name):
-    return "Hello " + name + "!"
+def process_inputs(text1, text2, image):
+    # Process your inputs and feed them to your model here
+    # This is a placeholder function, replace with your actual function
+    # result = llm_model.predict([text1, text2, image])
+    result = "This is a placeholder result"
+    return result
 
-demo = gr.Interface(fn=greet, inputs="text", outputs="text")
-    
-if __name__ == "__main__":
-    demo.launch(show_api=False, share=False)   
+iface = gr.Interface(
+    fn=process_inputs, 
+    inputs=[
+        gr.Textbox(lines=2, placeholder="Enter first text here...", label="Thuan"), 
+        gr.Textbox(lines=2, placeholder="Enter second text here..."), 
+        gr.Image()
+    ], 
+    outputs="text"
+)
+
+iface.launch()
