@@ -13,27 +13,22 @@
 - Flattening the input tensor $X \in R^{b \times h}$
 - Slicing the linear segment into $n = (b \times h) / B$ block
 - Quantize these blocks independently
+- Each block has a quantization constant $c_{i}$ independent (dtype = FP32)
 
-#### 2. Low-rank Adapters
-- LoRA 
+#### 2. Double Quantization
+- Quantize for constant $c_{i}$ to save bits.
 
-#### 3. Memory Requirement of Parameter-Efficient Finetuning
-- Gradient checkpointing. https://arxiv.org/abs/1604.06174
-- Aggressively reducing the amount of LoRA parameter yields only minor memory benefits.
+#### 3. k-bit NormalFloat (NF4)
+- Over 90% pre-trained weight have center-zero distribution.
+- Weighted the weight after quantize by a Normal Distribution.
 
+#### 4. Low-rank Adapters
+- LoRA with r higher (r=16)
+
+#### 5. Paged Optimizers
+- Bring some memory not using at a time such as (Optimizer states) to CPU memory (RAM). When the optimizer update gradient, the states will bring back to GPU.
+- https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 
 ### QLORA Finetuning
 - 4-bit for storage
 - bfloat16 for computation
-
-#### 1. 4-bit NormalFloat Quantization
- - 8-bit Optimizers via Block-wise Quantization. https://arxiv.org/abs/2110.02861v1
-
-
-#### 2. Double Quantization
-
-
-#### 2. Paged Optimizers
-- https://docs.nvidia.com/cuda/cuda-c-programming-guide/
-
-
