@@ -6,6 +6,7 @@ NanoGPT (Pytorch): https://github.com/karpathy/nanoGPT/blob/master/model.py
 
 import math
 import torch
+import inspect
 import torch.nn as nn
 import torch.nn.functional as F
 
