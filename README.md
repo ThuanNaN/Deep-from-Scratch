@@ -2,9 +2,9 @@
 
 ## TODOs
 ### Papers:
-- [ ] QLoRA. https://arxiv.org/abs/2305.14314
 - [ ] Flash-Attention. https://arxiv.org/abs/2205.14135
 - [ ] Flash-Attention-2. https://arxiv.org/abs/2307.08691
+- [ ] Mamba. https://arxiv.org/abs/2312.00752
 - [ ] DaLL-E. https://arxiv.org/abs/2102.12092
 - [ ] DaLL-E-2. https://cdn.openai.com/papers/dall-e-2.pdf
 - [ ] Latent-Diffusion. https://arxiv.org/abs/2112.10752 - https://github.com/apple/ml-stable-diffusion
@@ -14,7 +14,7 @@
 - [ ] RoundingDINO. https://github.com/IDEA-Research/GroundingDINO
 - [ ] Rounded-Segment-Anything. https://github.com/IDEA-Research/Grounded-Segment-Anything
 - [ ] PhoGPT. https://github.com/VinAIResearch/PhoGPT 
-- [ ] SAM. https://github.com/facebookresearch/segment-anything/tree/main
+- [ ] SAM. https://github.com/facebookresearch/segment-anything
 - [ ] VideoCrafter. https://github.com/AILab-CVC/VideoCrafter
 
 
@@ -25,7 +25,9 @@
 - [ ] FairSeq. https://github.com/facebookresearch/fairseq
 
 ### Inference
-- [ ] Triton server. https://github.com/triton-inference-server/tutorials - https://github.com/triton-inference-server/server/tree/main/docs/user_guide
+- [ ] Triton server. 
+  - https://github.com/triton-inference-server/tutorials 
+  - https://github.com/triton-inference-server/server/tree/main/docs/user_guide
 - [ ] Ollama. https://github.com/jmorganca/ollama
 
 ### UI

@@ -4,3 +4,5 @@ datasets==2.13.1
 tiktoken==0.4.0
 pillow
 gdown
+tritonclient[all]
+onnxruntime-gpu

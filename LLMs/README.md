@@ -19,16 +19,20 @@
 - [ ] LLaVA. https://arxiv.org/abs/2304.08485 - https://github.com/haotian-liu/LLaVA
 - [ ] Florence-2. https://arxiv.org/abs/2311.06242
 - [ ] A Comprehensive Overview of Large Language Models. https://arxiv.org/abs/2307.06435
-- [ ] Mamba. https://arxiv.org/abs/2312.00752
 - [ ] MoV - MoLORA. https://arxiv.org/pdf/2309.05444.pdf
 
 #### Speed-up LLMs
 - [ ] Flash-Attention. https://arxiv.org/abs/2205.14135
 - [ ] Flash-Attention-2. https://arxiv.org/abs/2307.08691
+- [ ] Mamba. https://arxiv.org/abs/2312.00752
 
 #### Optimizer
-- [ ] Lion Optimizer. https://arxiv.org/abs/2302.06675
+- [ ] SGD
+- [ ] Adam
+- [ ] AdamW
+- [ ] Adam Believe
 - [ ] Sophia Optimizer. https://arxiv.org/abs/2305.14342
+- [ ] Lion Optimizer. https://arxiv.org/abs/2302.06675
 
 ## 2. Library, Framework
 - vLLM. https://docs.vllm.ai/en/latest/index.html
