@@ -3,7 +3,7 @@
 - Github: https://github.com/Dao-AILab/flash-attention
 
 ### Keywords
-- GPU high bandwidth memory (HBM)
+- GPU high bandwidth memory (HBM). https://en.wikipedia.org/wiki/High_Bandwidth_Memory
 
 
 ### Concepts
