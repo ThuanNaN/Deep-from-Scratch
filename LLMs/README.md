@@ -18,13 +18,14 @@
 - [ ] Transfer Learning. https://aclanthology.org/2020.findings-emnlp.41.pdf
 - [ ] LLaVA. https://arxiv.org/abs/2304.08485 - https://github.com/haotian-liu/LLaVA
 - [ ] Florence-2. https://arxiv.org/abs/2311.06242
-- [ ] A Comprehensive Overview of Large Language Models. https://arxiv.org/abs/2307.06435
+- [ ] A Comprehensive Overview of Large Language Models https://arxiv.org/abs/2307.06435
 - [ ] MoV - MoLORA. https://arxiv.org/pdf/2309.05444.pdf
 
 #### Speed-up LLMs
 - [ ] Flash-Attention. https://arxiv.org/abs/2205.14135
 - [ ] Flash-Attention-2. https://arxiv.org/abs/2307.08691
 - [ ] Mamba. https://arxiv.org/abs/2312.00752
+- [ ] U-Mamba. https://arxiv.org/abs/2401.04722
 
 #### Optimizer
 - [ ] SGD
