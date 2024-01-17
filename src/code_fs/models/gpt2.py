@@ -56,7 +56,7 @@ class CausalSelfAttention(nn.Module):
 
         self.flash = hasattr(F, 'scaled_dot_product_attention')
         if not self.flash:
-            print("Fash attention require Pytorch >= 2.0. Using slow attention")
+            print("Flash attention require Pytorch >= 2.0. Using slow attention")
             self.register_buffer("bias", torch.tril(torch.ones(config.block_size, config.block_size))
                                               .view(1, 1, config.block_size, config.block_size))
 
