@@ -22,6 +22,7 @@
 - [ ] MoV - MoLORA. https://arxiv.org/pdf/2309.05444.pdf
 
 #### Speed-up LLMs
+- [ ] Longformer. https://arxiv.org/abs/2004.05150v2
 - [ ] Flash-Attention. https://arxiv.org/abs/2205.14135
 - [ ] Flash-Attention-2. https://arxiv.org/abs/2307.08691
 - [ ] Mamba. https://arxiv.org/abs/2312.00752
