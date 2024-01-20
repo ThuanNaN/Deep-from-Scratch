@@ -1,8 +1,6 @@
 # Unk-LLMs
 
 ## 1. Papers:
-- [ ] Scaling Laws. https://arxiv.org/abs/2203.15556
-- [ ] Language Modeling Is Compression. https://arxiv.org/abs/2309.10668
 - [ ] LLaMA-Adapter. https://arxiv.org/abs/2303.16199
 - [ ] LLaMA-Adapter-V2. https://arxiv.org/abs/2304.15010
 - [ ] ControlNet. https://arxiv.org/abs/2302.05543

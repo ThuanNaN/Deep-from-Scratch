@@ -2,8 +2,7 @@
 
 ## TODOs
 ### Papers:
-- [ ] Flash-Attention. https://arxiv.org/abs/2205.14135
-- [ ] Flash-Attention-2. https://arxiv.org/abs/2307.08691
+- [ ] Flash-Attention. https://arxiv.org/abs/2205.14135 -V2: https://arxiv.org/abs/2307.08691
 - [ ] Mamba. https://arxiv.org/abs/2312.00752
 - [ ] DaLL-E. https://arxiv.org/abs/2102.12092
 - [ ] DaLL-E-2. https://cdn.openai.com/papers/dall-e-2.pdf
@@ -14,7 +13,6 @@
 - [ ] RoundingDINO. https://github.com/IDEA-Research/GroundingDINO
 - [ ] Rounded-Segment-Anything. https://github.com/IDEA-Research/Grounded-Segment-Anything
 - [ ] PhoGPT. https://github.com/VinAIResearch/PhoGPT 
-- [ ] SAM. https://github.com/facebookresearch/segment-anything
 - [ ] VideoCrafter. https://github.com/AILab-CVC/VideoCrafter
 
 
@@ -23,6 +21,7 @@
 - [ ] vLLM. https://docs.vllm.ai/en/latest/index.html
 - [ ] MLX. https://github.com/ml-explore/mlx - https://github.com/ml-explore/mlx-examples
 - [ ] FairSeq. https://github.com/facebookresearch/fairseq
+- [ ] TRT. https://github.com/huggingface/trl
 
 ### Inference
 - [ ] Triton server. 
