@@ -1,9 +1,3 @@
-"""
-OpenAI (Tensorflow): https://github.com/openai/gpt-2/blob/master/src/model.py
-Huggingface (Pytorch): https://github.com/huggingface/transformers/blob/main/src/transformers/models/gpt2/modeling_gpt2.py
-NanoGPT (Pytorch): https://github.com/karpathy/nanoGPT/blob/master/model.py
-"""
-
 import math
 import torch
 import inspect
@@ -11,7 +5,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from dataclasses import dataclass
-from ..optim.sophia import SophiaG
+from ...optim.sophia import SophiaG
 
 optimizer_dict = {'adamw': torch.optim.AdamW,
                   'sophiag': SophiaG
