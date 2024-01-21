@@ -41,7 +41,6 @@ class FeedForward(nn.Module):
         )
     
     def forward(self, x):
-        # return self.net(x)
         return self.net_conv(x.permute(0, -1, 1)).permute(0, -1, 1)
 
 
