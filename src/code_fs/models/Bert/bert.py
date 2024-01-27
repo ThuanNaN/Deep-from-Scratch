@@ -18,9 +18,7 @@ class BertConfig:
     forward_expansion: int = 4
     dropout: float = 0.1
     bias: bool = False
-
-
-
+    
 
 class TokenEmbedding(nn.Embedding):
     def __init__(self, vocab_size, embed_size, pad_idx=0) -> None:
