@@ -10,12 +10,12 @@ def main(model_name):
     client = httpclient.InferenceServerClient(url="localhost:8000")
 
     # Inputs
-    url = "http://images.cocodataset.org/val2017/000000161642.jpg"
+    url = 'http://images.cocodataset.org/val2017/000000039769.jpg'
     image = np.asarray(Image.open(requests.get(url, stream=True).raw)).astype(
         np.float32
     )
-
-    image = np.expand_dims(image, axis=0)
+    # image = np.expand_dims(image, axis=0)
+    image = np.stack([image, image, image], axis=0)
 
     # Set Inputs
     input_tensors = [httpclient.InferInput("image", image.shape, datatype="FP32")]
@@ -32,7 +32,6 @@ def main(model_name):
     # Output
     last_hidden_state = query_response.as_numpy("last_hidden_state")
     print(last_hidden_state.shape)
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

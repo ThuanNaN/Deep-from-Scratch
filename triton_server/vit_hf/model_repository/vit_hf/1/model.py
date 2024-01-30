@@ -1,6 +1,7 @@
 import numpy as np
-from transformers import ViTImageProcessor, ViTModel
 import triton_python_backend_utils as pb_utils
+from transformers import ViTImageProcessor, ViTModel
+
 
 class TritonPythonModel:
     def initialize(self, args):
@@ -13,8 +14,7 @@ class TritonPythonModel:
         responses = []
         for request in requests:
             inp = pb_utils.get_input_tensor_by_name(request, "image")
-            input_image = np.squeeze(inp.as_numpy()).transpose((2, 0, 1))
-
+            input_image = inp.as_numpy()
             inputs = self.feature_extractor(images=input_image, return_tensors="pt")
 
             outputs = self.model(**inputs)
@@ -27,13 +27,4 @@ class TritonPythonModel:
                 ]
             )
             responses.append(inference_response)
-
         return responses
-
-
-    def finalize(self):
-        """`finalize` is called only once when the model is being unloaded.
-        Implementing `finalize` function is OPTIONAL. This function allows
-        the model to perform any necessary clean ups before exit.
-        """
-        print('Cleaning up...')

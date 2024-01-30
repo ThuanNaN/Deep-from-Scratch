@@ -17,4 +17,3 @@ pip install tritonclient
 
 python client.py
 ```
-
