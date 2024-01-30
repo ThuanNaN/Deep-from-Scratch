@@ -1,0 +1,3 @@
+torch==2.0.1
+transformers[torch]==4.30.1
+pillow==10.2.0

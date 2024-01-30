@@ -1,4 +1,20 @@
-```
-docker run --gpus=all -it --shm-size=256m --rm -p8000:8000 -p8001:8001 -p8002:8002 -v ${PWD}:/workspace/ -v ${PWD}/model_repository:/models nvcr.io/nvidia/tritonserver:23.07-py3 
+## ViT from Huggingface
 
+### Feature extraction only
+```python
+model = ViTModel.from_pretrained("google/vit-base-patch16-224-in21k")
 ```
+
+### Runs
+#### 1. Build and start triton container
+```bash
+make cont_up
+```
+
+#### 2. Run inference
+```python
+pip install tritonclient
+
+python client.py
+```
+

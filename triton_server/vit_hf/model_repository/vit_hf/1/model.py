@@ -14,6 +14,7 @@ class TritonPythonModel:
         for request in requests:
             inp = pb_utils.get_input_tensor_by_name(request, "image")
             input_image = np.squeeze(inp.as_numpy()).transpose((2, 0, 1))
+
             inputs = self.feature_extractor(images=input_image, return_tensors="pt")
 
             outputs = self.model(**inputs)
@@ -26,6 +27,7 @@ class TritonPythonModel:
                 ]
             )
             responses.append(inference_response)
+
         return responses
 
 

@@ -1,4 +1,4 @@
-name: "vit_huggingface"
+name: "vit_hf"
 backend: "python"
 max_batch_size: 8
 
@@ -20,6 +20,6 @@ output [
 
 instance_group [
     {
-        kind: KIND_GPU
+        kind: KIND_CPU
     }
 ]
