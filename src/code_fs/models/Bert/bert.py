@@ -118,8 +118,8 @@ class TransformerBlock(nn.Module):
         super().__init__()
         self.attn = SelfAttention(config)
         self.ffn = FeedForward(config)
-        self.norm1 = nn.LayerNorm(config.n_embd, bias=config.bias)
-        self.norm2 = nn.LayerNorm(config.n_embd, bias=config.bias)
+        self.norm1 = nn.LayerNorm(config.n_embd)
+        self.norm2 = nn.LayerNorm(config.n_embd)
         self.dropout = nn.Dropout(config.dropout)
 
     def forward(self, x, mask=None):
