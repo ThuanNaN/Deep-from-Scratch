@@ -1,7 +1,7 @@
 torch==2.2.1
-torchvsion==0.17.1
-transformers==4.38.2
-accelerate==0.27.12
+torchvision==0.17.1
+accelerate==0.28.0
+transformers[torch]==4.38.2
 evaluate==0.4.1
 datasets==2.18.0
 peft==0.9.0
