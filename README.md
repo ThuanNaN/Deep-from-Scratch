@@ -10,7 +10,6 @@ Notebooks: [Drive](https://drive.google.com/drive/folders/13dwL2I9-_obgkeLyprf7K
 - [ ] Latent-Diffusion. https://arxiv.org/abs/2112.10752 - https://github.com/apple/ml-stable-diffusion
 - [ ] ControlNet. https://arxiv.org/abs/2302.05543
 - [ ] Lion Optimizer. https://arxiv.org/abs/2302.06675
-- [ ] TensorRT-LLM. https://github.com/NVIDIA/TensorRT-LLM
 - [ ] RoundingDINO. https://github.com/IDEA-Research/GroundingDINO
 - [ ] Rounded-Segment-Anything. https://github.com/IDEA-Research/Grounded-Segment-Anything
 - [ ] PhoGPT. https://github.com/VinAIResearch/PhoGPT 
@@ -23,17 +22,6 @@ Notebooks: [Drive](https://drive.google.com/drive/folders/13dwL2I9-_obgkeLyprf7K
 - [ ] MLX. https://github.com/ml-explore/mlx - https://github.com/ml-explore/mlx-examples
 - [ ] FairSeq. https://github.com/facebookresearch/fairseq
 - [ ] TRT. https://github.com/huggingface/trl
-
-### Inference
-- [ ] Triton server. 
-  - https://github.com/triton-inference-server/tutorials 
-  - https://github.com/triton-inference-server/server/tree/main/docs/user_guide
-- [ ] Ollama. https://github.com/jmorganca/ollama
-
-### UI
-- https://www.gradio.app/
-- https://github.com/oobabooga/text-generation-webui
-
 
 ## Reference
 - https://nn.labml.ai
