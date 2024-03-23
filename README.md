@@ -1,5 +1,4 @@
 # Deep Learning from Scratch
-Notebooks: [Drive](https://drive.google.com/drive/folders/13dwL2I9-_obgkeLyprf7Kl2fWTTBtWdL?usp=drive_link)
 
 ## TODOs
 ### Papers:
